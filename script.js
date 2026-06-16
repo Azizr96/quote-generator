@@ -1,6 +1,6 @@
 
 let apiQuotes = [];
-
+/*
 //generate quote locally
 function newQuote (){
  const quote = localQuotes[Math.floor(Math.random() * localQuotes.length)];
@@ -10,8 +10,8 @@ function newQuote (){
 } 
 
 newQuote()
+*/
 
-/*
 //This is if you want to get from API
 //Show new Quote
 function newQuote (){
@@ -20,7 +20,7 @@ function newQuote (){
  console.log(quote)
 
 } 
-/
+
 // Get Quotes from API
 async function getQuotes() {
   const apiUrl = 'https://jacintodesign.github.io/quotes-api/data/quotes.json';
@@ -38,4 +38,3 @@ async function getQuotes() {
 };
 
 getQuotes();
-*/
