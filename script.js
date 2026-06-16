@@ -1,12 +1,17 @@
 
 let apiQuotes = [];
 
+//generate quote locally
+function newQuote (){
+ const quote = localQuotes[Math.floor(Math.random() * localQuotes.length)];
 
+ console.log(quote)
 
+} 
 
+newQuote()
 
-
-
+/*
 //This is if you want to get from API
 //Show new Quote
 function newQuote (){
@@ -33,3 +38,4 @@ async function getQuotes() {
 };
 
 getQuotes();
+*/
