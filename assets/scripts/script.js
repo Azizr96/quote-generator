@@ -20,24 +20,22 @@ function newQuote (){
 newQuote()
 */
 
-// show laoding
 
-function loading(){
+function showLoadingSpinner(){
   loader.hidden = false;
   quoteContainer.hidden = true;
-}
+};
 
-// hide laoding
 
-function complete () {
+function removeLoadingSpinner () {
   quoteContainer.hidden = false;
   loader.hidden = true;
-}
+};
 
 //This is if you want to get from API
 //Show new Quote
 function newQuote (){
-  loading();
+  showLoadingSpinner();
  const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
 
  // check if author field is blank and replac with unknown
@@ -56,12 +54,12 @@ function newQuote (){
  }
 //set quote, hide loader
  quoteText.textContent = quote.text;
- complete();
+ removeLoadingSpinner();
 } ;
 
 // Get Quotes from API
 async function getQuotes() {
-  loading();
+  showLoadingSpinner();
   const apiUrl = 'https://jacintodesign.github.io/quotes-api/data/quotes.json';
 
   try {
